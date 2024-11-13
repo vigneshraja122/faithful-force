@@ -1,9 +1,21 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
-  theme: {
-    extend: {},
+import { fontFamily as _fontFamily } from 'tailwindcss/defaultTheme'
+
+export const content = ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}']
+
+export const theme = {
+  extend: {
+    colors: {
+      primary: {
+        100: '#E6F0FF',
+        500: '#0066CC',
+        600: '#0052A3',
+      },
+    },
+    fontFamily: {
+      sans: ['Inter', ..._fontFamily.sans],
+      serif: ['Merriweather', ..._fontFamily.serif],
+    },
   },
-  plugins: [],
 }
 
